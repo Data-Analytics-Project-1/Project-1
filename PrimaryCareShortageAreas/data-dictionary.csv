@@ -1,0 +1,16 @@
+column,type,label,description
+MSSA_COUNTY,text,MSSA_COUNTY,County of the Medical Service Study Area (MSSA).
+MSSA_ID,text,MSSA_ID,Unique identifier of the MSSA.
+MSSA_NAME,text,MSSA_NAME,Name of the MSSA.
+Total_Population,numeric,Total_Population,Total Population of the MSSA.
+EST_Physicians,numeric,EST_Physicians,Estimated number of primary care physicians in the MSSA.  Includes MDs and DOs.
+EST_FNPPA,numeric,EST_FNPPA,Estimated number of family nurse practitioners and primary care physician assistants in the MSSA.
+EST_Providers,numeric,EST_Providers,Estimated number of primary care providers in the MSSA.  Calculated as EST_Physicians + (0.75 * EST_FNPPA).
+Provider_Ratio,numeric,Provider_Ratio,Population-to-provider ratio of the MSSA.  Calculated as Total_Population / EST_Providers.
+Score_Provider_Ratio,numeric,Score_Provider_Ratio,Subscore based on the provider ratio of the MSSA.  Possible values are 0-5.
+Pop_100FPL,numeric,Pop_100FPL,Population living  below the federal poverty level in the MSSA.
+PCT_100FPL,numeric,PCT_100FPL,Percent of the population in the MSSA living below the federal poverty level.  Calculated as Pop_100FPL / Total_Population.
+Score_Poverty,numeric,Score_Poverty,Subscore based on the poverty of the MSSA.  Possible values are 0-5.
+Score_Total,numeric,Score_Total,Final score of the MSSA for consideration as a Primary Care Shortage Area (PCSA).  Calculated as Score_Provider_Ratio + Score_Poverty.  Possible values are 0-10.
+PCSA,text,PCSA,Indicates whether the MSSA is considered a PCSA.  Possible values are Yes or No.
+Effective Date,timestamp,Effective_Date,Effective date of the PCSA designation.
