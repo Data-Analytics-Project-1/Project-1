@@ -1,1 +1,0 @@
-google_api_key = 'AIzaSyD8MX8euO3ocDBAVOlNyheT42b0s5DEHZQ'
